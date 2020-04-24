@@ -26,18 +26,18 @@ class KeychainBaseCase: XCTestCase {
     let keychain = Keychain(.appSpecific(access: .always, serviceName: "ExampleAppTests"))
     let card = Card(name: "Steve", number: "1234 5678 9012 3456")
     let user = User(username: "username", password: "password")
-// usernmaes and passwrods are dummy data please change to fit your env.
+// usernames and passwords are dummy data please change to fit your env.
     var distinctUsers: [User] {
         return [
-            User(username: "email@test.com", password: "password"),
-            User(username: "email@test.com", password: "password")
+            User(username: "test@test.com", password: "testpassword"),
+            User(username: "test@test.com", password: "testpassword")
         ]
     }
 
     var identicalUsers: [User] {
         return [
-            User(username: "emailOne@test.com", password: "p-onedummypassword"),
-            User(username: "emailOne@test.com", password: "p-twodummypassword")
+            User(username: "test@test.com", password: "p-onedummypassword"),
+            User(username: "test@test.com", password: "p-twodummypassword")
         ]
     }
 
